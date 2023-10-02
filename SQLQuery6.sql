@@ -1,0 +1,85 @@
+create table customer(
+Cust_Id Varchar(20) not null primary key,
+Cust_add Varchar(300) not null ,
+);
+create table retailer(
+Shop_ID Varchar(10) not null primary key ,
+Shop_name Varchar(30) not null,
+Shop_add Varchar(300) not null,
+ Item_ID varchar(20) foreign key references Item(Item_ID),
+);
+create table Item(
+Item_ID Varchar(20) not null Primary key,
+Item_name Varchar(20) not null,
+Category Varchar(20) not null,
+Cost int not null,
+Quantity int ,
+);
+insert into Item(Item_ID,Item_name,Category,Cost)
+values
+('I1','Milk','Grocery',60),
+('I2','Milk','Grocery',60),
+('I3','Milk','Grocery',60),
+('I4','Rice','Grocery',150),
+('I5','Rice','Grocery',150),
+('I6','Rice','Grocery',150),
+('I7','Coffee','Grocery',50),
+('I8','Coffee','Grocery',50),
+('I9','Coffee','Grocery',50),
+('I10','TeaPowder','Grocery',30),
+('I11','TeaPowder','Grocery',30),
+('I12','TeaPowder','Grocery',30),
+('I13','Biscuit','Grocery',25),
+('I14','Biscuit','Grocery',25),
+('I15','Biscuit','Grocery',25),
+('I16','Pen','Stationery',20),
+('I17','Pen','Stationery',20),
+('I18','Pen','Stationery',20),
+('I19','Notebook','Stationery',75),
+('I20','Notebook','Stationery',75),
+('I21','Notebook','Stationery',75),
+('I22','Sketchpen','Stationery',50),
+('I23','Sketchpen','Stationery',50),
+('I24','Sketchpen','Stationery',50),
+('I25','Crayon Set','Stationery',250),
+('I26','Crayon Set','Stationery',250),
+('I27','Crayon Set','Stationery',250),
+('I28','Writing Pad','Stationery',150),
+('I29','Writing Pad','Stationery',150),
+('I30','Writing Pad','Stationery',150);
+
+INSERT INTO retailer(Item_ID,Shop_ID, Shop_Name, Shop_Add)
+VALUES
+    ('I1','S10001', 'Gupta Provision Store', '123, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I2','S10002', 'Sharma Kirana Bazaar', '456, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I3','S10003', 'Agarwal Grocery Mart', '789, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I4','S10004', 'Singh Supermart', '101, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I5','S10005', 'Patel Provisions', '234, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I6','S10006', 'Reddy General Store', '567, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I7','S10007', 'Jain Grocers', '890, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I8','S10009', 'Verma Supermarket', '678, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I9','S10010', 'Kumar Kirana Store', '1234, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I10','S10011', 'Kapoor Grocery Shop', '5678, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I11','S10012', 'Gupta Provisions', '9101, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I12','S10013', 'Bansal Super Store', '2468, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I13','S10014', 'Choudhary Groceries', '7531, Sindhi Colony, Chembur, Mumbai, India'),
+	('I14','S10015', 'Malik Mini Mart', '1593, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I15','S10016', 'Tiwari General Store', '3572, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I16','S10017', 'Desai Super Store', '6894, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I17','S10018', 'Agnihotri Provisions', '1029, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I18','S10019', 'Sood Stationery House', '4665, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I19','S10020', 'Thakur Articles', '8247, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I20','S10021', 'Khanna  Store', '1300, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I21','S10022', 'Reddy Mini Mart', '2715, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I22','S10023', 'Agarwal Super Bazaar', '6938, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I23','S10024', 'Sharma Provisions', '5247, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I24','S10025', 'Mehta  Mart', '8763, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I25','S10026', 'Rajan Stationery', '2359, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I26','S10027', 'Verma Provision Store', '7452, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I27','S10028', 'Kapoor Supermarket', '3198, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I28','S10029', 'Chauhan Provisions', '4827, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I29','S10030', 'Sharma Stationery Shop', '6274, Sindhi Colony, Chembur, Mumbai, India'),
+    ('I30','S10031', 'Bansal Mini Mart', '7641, Sindhi Colony, Chembur, Mumbai, India');
+	select * from retailer;
+	select * from item;
+	
